@@ -1,4 +1,7 @@
 <h1> Cars </h1>
+<h3> Total Cars in Your Garage (<%= @cars.length %>)</h3>
+
+
 
 <% @cars.each do |car| %>
   <p><%= car.make %>, <%= car.model %></p>
@@ -13,3 +16,5 @@ Most importantly about Car class is that its a collection of data.
 We can iterate over a collection of data
 -->
 <%end%>
+
+<%= link_to "Add a New Car", "/cars/new" %>
