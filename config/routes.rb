@@ -2,17 +2,21 @@ Rails.application.routes.draw do
 
   root 'cars#index'
 
-  get 'cars' => 'cars#index'
+  resources :cars
 
-  get 'cars/new' => 'cars#new'
-  post 'cars' => 'cars#create'
+  # replace the following 7 routes:
 
-  get 'cars/:id' => 'cars#show', as: 'car'
-
-  get 'cars/:id/edit' => 'cars#edit', as: 'edit_car'
-  patch 'cars/:id' => 'cars#update'
-
-  delete 'cars/:id' => 'cars#destroy', as: 'delete_car'
+  # get 'cars' => 'cars#index'
+  #
+  # get 'cars/new' => 'cars#new'
+  # post 'cars' => 'cars#create'
+  #
+  # get 'cars/:id' => 'cars#show', as: 'car'
+  #
+  # get 'cars/:id/edit' => 'cars#edit', as: 'edit_car'
+  # patch 'cars/:id' => 'cars#update'
+  #
+  # delete 'cars/:id' => 'cars#destroy', as: 'delete_car'
 
 
 
