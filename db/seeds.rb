@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Car.create(
+  :make => "Audi",
+  :model => "TT",
+  :colour => "Black"
+)
+
+Car.create(
+  :make => "Acura",
+  :model => "TL",
+  :colour => "Blue"
+)
+
+Car.create(
+  :make => "Porsche",
+  :model => "Carrera",
+  :colour => "Silver"
+)

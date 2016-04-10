@@ -1,1 +1,15 @@
 <h1> Cars </h1>
+
+<% @cars.each do |car| %>
+  <p><%= car.make %>, <%= car.model %></p>
+  <p><%= car.colour %></p>
+
+<!--
+@cars is now a collection of all things of the Car Class.
+Car class is the model/blueprint for any instance of a car
+Active Model makes methods available on anything of this class
+including attr_accessors and many more
+Most importantly about Car class is that its a collection of data.
+We can iterate over a collection of data
+-->
+<%end%>
