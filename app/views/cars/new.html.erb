@@ -1,23 +1,23 @@
 <h1>Add your favourite car!</h1>
 
-<%= form_tag "/cars" do %>
+<%= form_for @car do |f| %>
   <p>
-    <%= label_tag :make %><br>
-    <%= text_field_tag :make %>
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
   </p>
 
   <p>
-    <%= label_tag :model %><br>
-    <%= text_field_tag :model %>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
   </p>
 
   <p>
-    <%= label_tag :colour %><br>
-    <%= text_field_tag :colour %>
+    <%= f.label :colour %><br>
+    <%= f.text_field :colour %>
   </p>
 
   <p>
-    <%=submit_tag "ADD YOUR CAR" %>
+    <%= f.submit "ADD YOUR CAR" %>
   </p>
 
 <% end %>

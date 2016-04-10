@@ -9,11 +9,23 @@ class CarsController < ApplicationController
   end
 
   def new
+    @car = Car.new
   end
 
   def create
-    render text: "We just added a new car! Make: #{params[:make]}, Model: #{params[:model]}, and colour: #{params[:colour]}"
+    @car = Car.new(car_params)
+
+    if @car.save
+      redirect_to cars_url
+    else
+      render :new
+    end
   end
 
+  private
+
+  def car_params
+    params.require(:car).permit(:make, :model, :colour)
+  end
 
 end
