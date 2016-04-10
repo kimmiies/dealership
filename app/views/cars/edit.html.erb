@@ -1,0 +1,30 @@
+<h1>Change Your Car</h1>
+
+<p>
+  <%= link_to "Go Back", @car %>
+</p>
+
+<!--  In the "new" form- we linked to cars_url vs @car -->
+<!--  What exactly are we linking to here? -->
+
+<%= form_for @car do |f| %>
+  <p>
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </p>
+
+  <p>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </p>
+
+  <p>
+    <%= f.label :colour %><br>
+    <%= f.text_field :colour %>
+  </p>
+
+  <p>
+    <%= f.submit "ADD YOUR CAR" %>
+  </p>
+
+<% end %>

@@ -1,2 +1,4 @@
 <p><%= @car.make %>, <%= @car.model %></p>
 <p><%= @car.colour %></p>
+
+<%= link_to "Back to Cars Main Page", cars_url %> | <%= link_to "Edit", edit_car_path(@car) %>

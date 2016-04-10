@@ -22,6 +22,24 @@ class CarsController < ApplicationController
     end
   end
 
+def edit
+  @car = Car.find(params[:id])
+end
+
+def update
+  @car = Car.find(params[:id])
+
+  if @car.update_attributes(car_params)
+    redirect_to "/cars/#{@car.id}"
+    # how to use something_url with cars/:id
+  else
+    render :edit
+  end
+end
+
+
+
+
   private
 
   def car_params
