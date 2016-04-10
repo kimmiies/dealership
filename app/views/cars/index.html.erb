@@ -4,8 +4,8 @@
 
 
 <% @cars.each do |car| %>
-  <p><%= car.make %>, <%= car.model %></p>
-  <p><%= car.colour %></p>
+  <p><%= car.make %>, <%= car.model %>, <%= car.colour %> | <%= link_to "See this Car Here", "/cars/#{car.id}" %></p>
+
 
 <!--
 @cars is now a collection of all things of the Car Class.
@@ -17,4 +17,4 @@ We can iterate over a collection of data
 -->
 <%end%>
 
-<%= link_to "Add a New Car", "/cars/new" %>
+<p><%= link_to "Add a New Car", "/cars/new" %></p>

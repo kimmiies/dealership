@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   get 'cars/:id' => 'cars#show', as: 'car'
 
-  get 'cars/:id/edit' => "cars#edit", as: "edit_car"
-  patch 'cars/:id' => "cars#update"
+  get 'cars/:id/edit' => 'cars#edit', as: 'edit_car'
+  patch 'cars/:id' => 'cars#update'
+
+  delete 'cars/:id' => 'cars#destroy', as: 'delete_car'
 
 
 
